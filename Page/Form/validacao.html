@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 3</title>
+    <script defer>
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get("email"); 
+        const senha = urlParams.get("senha");
+    </script>
+</head>
+<body>
+    
+    <h2>Bem Vindo!</span> </h2>
+    <h4> Email: <input type="text" id="user-email" placeholder="Email" />
+    <h4> Senha: <input type="text" id="user-senha" placeholder="Senha" />
+    
+    <p>
+        <a href="./index.html"> Form Page</a>
+    </p>
+
+    <script>
+        const spanEmail = document.getElementById("user-email");
+        const spanSenha = document.getElementById("user-senha");
+
+        console.log(spanEmail, spanSenha);
+
+        setTimeout(() => {
+            spanEmail.value = email;
+            spanSenha.value = senha;
+        }, 2000);
+
+    </script>
+
+</body>
+</html>
